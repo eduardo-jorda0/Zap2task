@@ -1,0 +1,9 @@
+[server]
+# Deve ficar em sincronia com config.MAX_UPLOAD_SIZE_MB (em megabytes).
+maxUploadSize = 500
+
+[browser]
+# Evita a pergunta interativa de telemetria no terminal na primeira execução,
+# que ficava travando o processo antes do servidor subir (o .bat parecia
+# "não abrir" porque o servidor nunca chegava a escutar a porta).
+gatherUsageStats = false

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Command python, python3, py -ErrorAction SilentlyContinue)",
+      "PowerShell(python --version 2>&1)",
+      "Bash(where python *)",
+      "Bash(python -m venv .venv)",
+      "Bash(\".venv/Scripts/python.exe\" -m pip install --upgrade pip pytest)",
+      "Bash(\".venv/Scripts/python.exe\" -m pytest -v)",
+      "Bash(where ffmpeg *)",
+      "PowerShell(Get-Command ffmpeg -ErrorAction SilentlyContinue)",
+      "PowerShell(if \\(-not $?\\) { \"FFMPEG_NAO_ENCONTRADO_NO_PATH\" })",
+      "Bash(ffmpeg -version)",
+      "Bash(\"/c/Users/edulu/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-8.1.2-full_build/bin/ffmpeg.exe\" -version)",
+      "Bash(.venv/Scripts/python.exe -c ' *)",
+      "Bash(xxd \"/c/Users/edulu/.streamlit/credentials.toml\")",
+      "PowerShell(Write-Output \"HOME=$HOME\"; Write-Output \"USERPROFILE=$env:USERPROFILE\"; Test-Path \"$HOME\\\\.streamlit\\\\credentials.toml\"; Get-ChildItem \"$HOME\\\\.streamlit\" -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Process | Where-Object { $_.ProcessName -match \"streamlit|python|cmd\" } | Select-Object ProcessName, Id)"
+    ]
+  }
+}
